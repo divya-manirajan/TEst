@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale1">
+
+    <!-- applies styles to make everything look nice (comment this line out to see what it looks like without) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"> 
+
+</head>
+<body>
+    <script>
+      window.onload = function(){ //Do not do anything until page is fully loaded
+
+        let btn = document.getElementById("button-addon");
+
+        btn.addEventListener("click", function(){ //executes when form button is clicked
+
+          let submission = document.getElementById("form-value").value; //get result from form submission
+          document.getElementById("result").innerHTML = submission; //edit html element with id="result" and set it equal to submission variable
+
+        })
+      }
+    </script>
+
+    <label for="basic-url">Form with result below example</label>
+    <div class="input-group md-6 form-width">
+        <input type="text" class="form-control" name="name" id="form-value" aria-describedby="button-addon" placeholder="Enter a value">
+        <button class="btn btn-primary" type="button" id="button-addon">Scan</button>
+     </div>
+     <div id="result" class="form-text form-width">
+       Result
+     </div>
+  </body>
+</html>
